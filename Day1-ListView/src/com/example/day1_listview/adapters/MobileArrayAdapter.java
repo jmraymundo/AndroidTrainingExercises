@@ -1,7 +1,7 @@
 
-package com.example.day1.adapters;
+package com.example.day1_listview.adapters;
 
-import com.example.day1.R;
+import com.example.day1_listview.R;
 
 import android.content.Context;
 import android.view.LayoutInflater;

@@ -1,7 +1,7 @@
 
-package com.example.day1.activities;
+package com.example.day1_listview.activities;
 
-import com.example.day1.R;
+import com.example.day1_listview.R;
 
 import android.app.ListActivity;
 import android.os.Bundle;

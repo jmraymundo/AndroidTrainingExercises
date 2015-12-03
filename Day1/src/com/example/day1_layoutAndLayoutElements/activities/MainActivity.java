@@ -1,7 +1,7 @@
 
-package com.example.day1.activities;
+package com.example.day1_layoutAndLayoutElements.activities;
 
-import com.example.day1.R;
+import com.example.day1_layoutAndLayoutElements.R;
 
 import android.app.Activity;
 import android.os.Bundle;

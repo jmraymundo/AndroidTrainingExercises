@@ -4,9 +4,13 @@
 	android:layout_height="match_parent"
 	android:orientation="horizontal" >
 	<Button
-		android:text="Button with text"
 		android:id="@+id/button1"
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		/>
+		android:text="B1" />
+	<Button
+		android:id="@+id/button2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="B2" />
 </LinearLayout>

@@ -4,7 +4,10 @@ package com.example.day2_inputcontrols.activities;
 import com.example.day2_inputcontrols.R;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -73,6 +76,44 @@ public class MainActivity extends Activity
                 showText( text );
             }
         }
+    }
+
+    private class PrivateOnClickListener implements OnClickListener
+    {
+        @Override
+        public void onClick( View v )
+        {
+            int id = v.getId();
+            switch( id )
+            {
+                case R.id.showSpinnerButton:
+                    showSpinner();
+                    break;
+                case R.id.showDatePickerButton:
+                    showDatePicker();
+                    break;
+                case R.id.showTimePickerButton:
+                    showTimePicker();
+                    break;
+                default:
+                    return;
+            }
+        }
+    }
+
+    private void showSpinner()
+    {
+
+    }
+
+    private void showDatePicker()
+    {
+
+    }
+
+    private void showTimePicker()
+    {
+
     }
 
     private void showText( String text )

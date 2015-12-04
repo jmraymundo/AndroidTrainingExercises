@@ -29,6 +29,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class MainActivity extends Activity
 {
@@ -39,6 +40,8 @@ public class MainActivity extends Activity
     Button mTimePickerButton;
 
     CheckBox mCheckBox;
+
+    ToggleButton mToggleButton;
 
     RadioButton mRadioButton1;
 
@@ -71,6 +74,24 @@ public class MainActivity extends Activity
                 else
                 {
                     text = text.concat( "unchecked!" );
+                }
+                showText( text );
+            }
+        } );
+        mToggleButton = ( ToggleButton ) findViewById( R.id.toggleButton );
+        mToggleButton.setOnCheckedChangeListener( new OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged( CompoundButton buttonView, boolean isOn )
+            {
+                String text = "ToggleButton is toggled ";
+                if( isOn )
+                {
+                    text = text.concat( "on!" );
+                }
+                else
+                {
+                    text = text.concat( "off!" );
                 }
                 showText( text );
             }

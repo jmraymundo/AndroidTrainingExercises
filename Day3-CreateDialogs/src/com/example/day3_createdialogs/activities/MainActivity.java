@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity
@@ -22,6 +23,8 @@ public class MainActivity extends Activity
     Button mButton2;
 
     Button mButton3;
+
+    TextView mTextView;
 
     @Override
     protected void onCreate( Bundle savedInstanceState )
@@ -41,7 +44,7 @@ public class MainActivity extends Activity
                     @Override
                     public void onClick( DialogInterface dialog, int which )
                     {
-                        Toast.makeText( MainActivity.this, "You are hungry.", Toast.LENGTH_SHORT ).show();
+                        mTextView.setText( "You are hungry." );
                     }
                 } );
                 dialogBuilder.setNeutralButton( "Maybe", new DialogInterface.OnClickListener()
@@ -49,7 +52,7 @@ public class MainActivity extends Activity
                     @Override
                     public void onClick( DialogInterface dialog, int which )
                     {
-                        Toast.makeText( MainActivity.this, "You may be hungry.", Toast.LENGTH_SHORT ).show();
+                        mTextView.setText( "You may be hungry." );
                     }
                 } );
                 dialogBuilder.setNegativeButton( "No", new DialogInterface.OnClickListener()
@@ -57,7 +60,7 @@ public class MainActivity extends Activity
                     @Override
                     public void onClick( DialogInterface dialog, int which )
                     {
-                        Toast.makeText( MainActivity.this, "You are not hungry.", Toast.LENGTH_SHORT ).show();
+                        mTextView.setText( "You are not hungry." );
                     }
                 } );
                 AlertDialog dialog = dialogBuilder.create();
@@ -101,10 +104,17 @@ public class MainActivity extends Activity
                             String[] choices = getResources().getStringArray( R.array.starter_pokemon );
                             text = choices[choice.get( 0 )] + ", I choose you!";
                         }
-                        Toast.makeText( MainActivity.this, text, Toast.LENGTH_SHORT ).show();
+                        mTextView.setText( text );
                     }
                 } );
-                dialogBuilder.setNegativeButton( "I cannot choose.", null );
+                dialogBuilder.setNegativeButton( "I cannot choose.", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick( DialogInterface dialog, int which )
+                    {
+                        mTextView.setText( "You chose no Pokemon." );
+                    }
+                } );
                 AlertDialog dialog = dialogBuilder.create();
                 dialog.show();
             }
@@ -163,13 +173,21 @@ public class MainActivity extends Activity
                             text = text.trim();
                             text = text.substring( 0, text.length() - 1 );
                         }
-                        Toast.makeText( MainActivity.this, "You chose " + text, Toast.LENGTH_SHORT ).show();
+                        mTextView.setText( "You chose " + text );
                     }
                 } );
-                dialogBuilder.setNegativeButton( "Cancel", null );
+                dialogBuilder.setNegativeButton( "Cancel", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick( DialogInterface dialog, int which )
+                    {
+                        mTextView.setText( "You chose nobody!" );
+                    }
+                } );
                 AlertDialog dialog = dialogBuilder.create();
                 dialog.show();
             }
         } );
+        mTextView = ( TextView ) findViewById( R.id.textView );
     }
 }

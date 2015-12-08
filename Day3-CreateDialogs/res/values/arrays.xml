@@ -7,4 +7,16 @@
 		<item>Pikachu</item>
 		<item>Eevee</item>
 	</string-array>
+	<string-array name="dota2_teams">
+		<item>Natus Vincere</item>
+		<item>Evil Geniuses</item>
+		<item>Invictus Gaming</item>
+		<item>Alliance</item>
+		<item>Newbee</item>
+		<item>LGD Gaming</item>
+		<item>Mineski</item>
+		<item>Fnatic</item>
+		<item>Virtuos Pro</item>
+		<item>Team Secret</item>
+	</string-array>
 </resources>

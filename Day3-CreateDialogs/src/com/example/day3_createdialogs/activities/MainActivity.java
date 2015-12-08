@@ -8,6 +8,7 @@ import com.example.day3_createdialogs.R;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnMultiChoiceClickListener;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -109,5 +110,66 @@ public class MainActivity extends Activity
             }
         } );
         mButton3 = ( Button ) findViewById( R.id.button3 );
+        mButton3.setOnClickListener( new OnClickListener()
+        {
+            @Override
+            public void onClick( View v )
+            {
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder( MainActivity.this );
+                dialogBuilder.setTitle( "Select your Top 5 teams:" );
+                final ArrayList< String > selectedTeams = new ArrayList< String >();
+                dialogBuilder.setMultiChoiceItems( R.array.dota2_teams, null, new OnMultiChoiceClickListener()
+                {
+                    @Override
+                    public void onClick( DialogInterface dialog, int which, boolean isChecked )
+                    {
+                        String[] teams = getResources().getStringArray( R.array.dota2_teams );
+                        if( isChecked )
+                        {
+                            if( selectedTeams.size() >= 5 )
+                            {
+                                ( ( AlertDialog ) dialog ).getListView().setItemChecked( which, !isChecked );
+                                Toast.makeText( MainActivity.this, "Select up to 5 teams only.", Toast.LENGTH_SHORT )
+                                        .show();
+                            }
+                            else
+                            {
+                                selectedTeams.add( teams[which] );
+                            }
+                        }
+                        else
+                        {
+                            selectedTeams.remove( teams[which] );
+                        }
+                    }
+                } );
+                dialogBuilder.setPositiveButton( "Select", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick( DialogInterface dialog, int which )
+                    {
+                        String text;
+                        if( selectedTeams.isEmpty() )
+                        {
+                            text = "nobody!";
+                        }
+                        else
+                        {
+                            text = "";
+                            for( String team : selectedTeams )
+                            {
+                                text = text.concat( team + ", " );
+                            }
+                            text = text.trim();
+                            text = text.substring( 0, text.length() - 1 );
+                        }
+                        Toast.makeText( MainActivity.this, "You chose " + text, Toast.LENGTH_SHORT ).show();
+                    }
+                } );
+                dialogBuilder.setNegativeButton( "Cancel", null );
+                AlertDialog dialog = dialogBuilder.create();
+                dialog.show();
+            }
+        } );
     }
 }

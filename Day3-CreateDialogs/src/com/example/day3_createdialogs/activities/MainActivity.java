@@ -1,6 +1,8 @@
 
 package com.example.day3_createdialogs.activities;
 
+import java.util.ArrayList;
+
 import com.example.day3_createdialogs.R;
 
 import android.app.Activity;
@@ -31,7 +33,6 @@ public class MainActivity extends Activity
             @Override
             public void onClick( View v )
             {
-
                 AlertDialog.Builder dialogBuilder = new AlertDialog.Builder( MainActivity.this );
                 dialogBuilder.setTitle( "Are you hungry?" );
                 dialogBuilder.setPositiveButton( "Yes", new DialogInterface.OnClickListener()
@@ -63,6 +64,50 @@ public class MainActivity extends Activity
             }
         } );
         mButton2 = ( Button ) findViewById( R.id.button2 );
+        mButton2.setOnClickListener( new OnClickListener()
+        {
+            @Override
+            public void onClick( View v )
+            {
+                final ArrayList< Integer > choice = new ArrayList< Integer >();
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder( MainActivity.this );
+                dialogBuilder.setTitle( "Choose your starter Pokemon:" );
+                dialogBuilder.setSingleChoiceItems( R.array.starter_pokemon, -1, new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick( DialogInterface dialog, int which )
+                    {
+                        if( choice.isEmpty() )
+                        {
+                            choice.add( which );
+                            return;
+                        }
+                        choice.set( 0, which );
+                    }
+                } );
+                dialogBuilder.setPositiveButton( "I choose you!", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick( DialogInterface dialog, int which )
+                    {
+                        String text;
+                        if( choice.isEmpty() )
+                        {
+                            text = "You did not choose any Pokemon!";
+                        }
+                        else
+                        {
+                            String[] choices = getResources().getStringArray( R.array.starter_pokemon );
+                            text = choices[choice.get( 0 )] + ", I choose you!";
+                        }
+                        Toast.makeText( MainActivity.this, text, Toast.LENGTH_SHORT ).show();
+                    }
+                } );
+                dialogBuilder.setNegativeButton( "I cannot choose.", null );
+                AlertDialog dialog = dialogBuilder.create();
+                dialog.show();
+            }
+        } );
         mButton3 = ( Button ) findViewById( R.id.button3 );
     }
 }

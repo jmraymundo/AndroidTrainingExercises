@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="starter_pokemon">
+		<item>Bulbasaur</item>
+		<item>Charmander</item>
+		<item>Squirtle</item>
+		<item>Pikachu</item>
+		<item>Eevee</item>
+	</string-array>
+</resources>

@@ -1,5 +1,7 @@
 
-package com.example.day3_createdialogs;
+package com.example.day3_createdialogs.activities;
+
+import com.example.day3_createdialogs.R;
 
 import android.app.Activity;
 import android.os.Bundle;

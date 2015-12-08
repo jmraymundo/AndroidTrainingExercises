@@ -1,5 +1,7 @@
 
-package com.example.day3_activitylifecyclesstates;
+package com.example.day3_activitylifecyclesstates.activities;
+
+import com.example.day3_activitylifecyclesstates.R;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,5 +1,7 @@
 
-package com.example.day3_invokeactivityinputresult;
+package com.example.day3_invokeactivityinputresult.activities;
+
+import com.example.day3_invokeactivityinputresult.R;
 
 import android.app.Activity;
 import android.content.Intent;

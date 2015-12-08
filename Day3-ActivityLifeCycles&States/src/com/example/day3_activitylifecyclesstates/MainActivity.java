@@ -2,19 +2,37 @@
 package com.example.day3_activitylifecyclesstates;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
-public class MainActivity extends Activity
+public class MainActivity extends Activity implements OnClickListener
 {
-    private static final String TAG = "States";
+
+    final String TAG = "States";
+
+    Button btnActTwo;
 
     @Override
-    protected void onCreate( Bundle savedInstanceState )
+    public void onCreate( Bundle savedInstanceState )
     {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
+
+        btnActTwo = ( Button ) findViewById( R.id.btnActTwo );
+        btnActTwo.setOnClickListener( this );
+
         Log.d( TAG, "MainActivity: onCreate()" );
+    }
+
+    @Override
+    protected void onRestart()
+    {
+        super.onRestart();
+        Log.d( TAG, "MainActivity: onRestart()" );
     }
 
     @Override
@@ -50,5 +68,12 @@ public class MainActivity extends Activity
     {
         super.onDestroy();
         Log.d( TAG, "MainActivity: onDestroy()" );
+    }
+
+    @Override
+    public void onClick( View v )
+    {
+        Intent intent = new Intent( this, ActivityTwo.class );
+        startActivity( intent );
     }
 }

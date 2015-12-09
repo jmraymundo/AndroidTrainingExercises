@@ -1,5 +1,5 @@
 
-package com.example.photogallery.object;
+package com.example.day3_displayingbitmapsefficiently.object;
 
 public class GalleryItem
 {

@@ -1,5 +1,5 @@
 
-package com.example.photogallery.utils;
+package com.example.day3_displayingbitmapsefficiently.utils;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.example.photogallery.object.GalleryItem;
+import com.example.day3_displayingbitmapsefficiently.object.GalleryItem;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;

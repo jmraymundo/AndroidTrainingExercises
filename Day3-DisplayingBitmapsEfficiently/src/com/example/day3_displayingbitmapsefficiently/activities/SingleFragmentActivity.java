@@ -1,7 +1,7 @@
 
-package com.example.photogallery.activity;
+package com.example.day3_displayingbitmapsefficiently.activities;
 
-import com.example.photogallery.R;
+import com.example.day3_displayingbitmapsefficiently.R;
 
 import android.app.Activity;
 import android.app.Fragment;

@@ -1,7 +1,7 @@
 
-package com.example.photogallery.utils;
+package com.example.day3_displayingbitmapsefficiently.utils;
 
-import com.example.photogallery.services.PollService;
+import com.example.day3_displayingbitmapsefficiently.services.PollService;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

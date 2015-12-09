@@ -1,7 +1,7 @@
 
-package com.example.photogallery.fragment;
+package com.example.day3_displayingbitmapsefficiently.fragment;
 
-import com.example.photogallery.services.PollService;
+import com.example.day3_displayingbitmapsefficiently.services.PollService;
 
 import android.app.Activity;
 import android.app.Fragment;

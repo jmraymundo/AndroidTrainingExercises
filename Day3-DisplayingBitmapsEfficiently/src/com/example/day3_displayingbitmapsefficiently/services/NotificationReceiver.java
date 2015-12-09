@@ -1,5 +1,5 @@
 
-package com.example.photogallery.services;
+package com.example.day3_displayingbitmapsefficiently.services;
 
 import android.app.Activity;
 import android.app.Notification;

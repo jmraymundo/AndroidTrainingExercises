@@ -1,12 +1,12 @@
 
-package com.example.photogallery.services;
+package com.example.day3_displayingbitmapsefficiently.services;
 
 import java.util.ArrayList;
 
-import com.example.photogallery.R;
-import com.example.photogallery.activity.PhotoGalleryActivity;
-import com.example.photogallery.object.GalleryItem;
-import com.example.photogallery.utils.FlickrFetcher;
+import com.example.day3_displayingbitmapsefficiently.R;
+import com.example.day3_displayingbitmapsefficiently.activities.PhotoGalleryActivity;
+import com.example.day3_displayingbitmapsefficiently.object.GalleryItem;
+import com.example.day3_displayingbitmapsefficiently.utils.FlickrFetcher;
 
 import android.app.Activity;
 import android.app.AlarmManager;

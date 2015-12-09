@@ -1,7 +1,7 @@
 
-package com.example.photogallery.fragment;
+package com.example.day3_displayingbitmapsefficiently.fragment;
 
-import com.example.photogallery.R;
+import com.example.day3_displayingbitmapsefficiently.R;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;

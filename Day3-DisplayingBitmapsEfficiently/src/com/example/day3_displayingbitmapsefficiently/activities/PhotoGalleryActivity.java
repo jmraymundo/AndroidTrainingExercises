@@ -1,9 +1,9 @@
 
-package com.example.photogallery.activity;
+package com.example.day3_displayingbitmapsefficiently.activities;
 
-import com.example.photogallery.R;
-import com.example.photogallery.fragment.PhotoGalleryFragment;
-import com.example.photogallery.utils.FlickrFetcher;
+import com.example.day3_displayingbitmapsefficiently.R;
+import com.example.day3_displayingbitmapsefficiently.fragment.PhotoGalleryFragment;
+import com.example.day3_displayingbitmapsefficiently.utils.FlickrFetcher;
 
 import android.app.Fragment;
 import android.app.SearchManager;

@@ -1,15 +1,15 @@
 
-package com.example.photogallery.fragment;
+package com.example.day3_displayingbitmapsefficiently.fragment;
 
 import java.util.ArrayList;
 
-import com.example.photogallery.R;
-import com.example.photogallery.activity.PhotoPageActivity;
-import com.example.photogallery.object.GalleryItem;
-import com.example.photogallery.services.PollService;
-import com.example.photogallery.utils.FlickrFetcher;
-import com.example.photogallery.utils.ThumbnailDownloader;
-import com.example.photogallery.utils.ThumbnailDownloader.Listener;
+import com.example.day3_displayingbitmapsefficiently.R;
+import com.example.day3_displayingbitmapsefficiently.activities.PhotoPageActivity;
+import com.example.day3_displayingbitmapsefficiently.object.GalleryItem;
+import com.example.day3_displayingbitmapsefficiently.services.PollService;
+import com.example.day3_displayingbitmapsefficiently.utils.FlickrFetcher;
+import com.example.day3_displayingbitmapsefficiently.utils.ThumbnailDownloader;
+import com.example.day3_displayingbitmapsefficiently.utils.ThumbnailDownloader.Listener;
 
 import android.app.Activity;
 import android.app.SearchManager;

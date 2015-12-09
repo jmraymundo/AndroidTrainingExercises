@@ -1,5 +1,5 @@
 
-package com.example.photogallery.utils;
+package com.example.day3_displayingbitmapsefficiently.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import com.example.photogallery.object.GalleryItem;
+import com.example.day3_displayingbitmapsefficiently.object.GalleryItem;
 
 import android.net.Uri;
 import android.util.Log;

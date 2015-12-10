@@ -89,11 +89,9 @@ public class FlickrFetcher
             return output;
         }
         finally
-
         {
             connection.disconnect();
         }
-
     }
 
     public void parseItems( ArrayList< GalleryItem > items, XmlPullParser parser )

@@ -3,4 +3,8 @@
 	<string name="app_name">Day 4 - JSON Parsing</string>
 	<string name="hello_world">Hello world!</string>
 	<string name="action_settings">Settings</string>
+	<string name="hpLabel">HP</string>
+	<string name="atkLabel">ATK</string>
+	<string name="defLabel">DEF</string>
+	<string name="recLabel">REC</string>
 </resources>

@@ -21,8 +21,12 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name=".activities.SingleContactActivity"
-			android:label="Contact" >
+			android:name=".activities.UnitActivity"
+			android:label="Unit" >
+		</activity>
+		<activity
+			android:name=".activities.UnitImageActivity"
+			android:label="Unit Image" >
 		</activity>
 	</application>
 </manifest>

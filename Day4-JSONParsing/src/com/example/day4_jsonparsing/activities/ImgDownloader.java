@@ -15,7 +15,6 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 public class ImgDownloader extends AsyncTask< Integer, Void, Bitmap >
 {
@@ -24,8 +23,6 @@ public class ImgDownloader extends AsyncTask< Integer, Void, Bitmap >
     ImageView mImageView;
 
     Context mContext;
-
-    private boolean isCached;
 
     private boolean isIconOnly;
 
@@ -57,12 +54,10 @@ public class ImgDownloader extends AsyncTask< Integer, Void, Bitmap >
         Bitmap cached = mCache.get( url );
         if( cached != null )
         {
-            isCached = true;
             return cached;
         }
         try
         {
-            isCached = false;
             byte[] bitmapBytes = getUrlBytes( url );
             Bitmap image = BitmapFactory.decodeByteArray( bitmapBytes, 0, bitmapBytes.length );
             mCache.put( url, image );
@@ -86,14 +81,6 @@ public class ImgDownloader extends AsyncTask< Integer, Void, Bitmap >
     protected void onPostExecute( Bitmap result )
     {
         mImageView.setImageBitmap( result );
-        if( isCached )
-        {
-            Toast.makeText( mContext, "loading cached image.", Toast.LENGTH_SHORT ).show();
-        }
-        else
-        {
-            Toast.makeText( mContext, "image not cached. downloading image.", Toast.LENGTH_SHORT ).show();
-        }
     }
 
     private byte[] getUrlBytes( String urlSpec ) throws IOException

@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context="com.example.day3_createdialogs.activities.MainActivity" >
+	<Button
+		android:id="@+id/button1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Alert Dialog with 3 Buttons" />
+	<Button
+		android:id="@+id/button2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Alert Dialog with Single Choice List" />
+	<Button
+		android:id="@+id/button3"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Alert Dialog with Multiple Choice List" />
+	<TextView
+		android:id="@+id/textView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:text="Text will appear here." />
+</LinearLayout>

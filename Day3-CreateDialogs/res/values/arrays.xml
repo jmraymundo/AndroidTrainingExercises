@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="starter_pokemon">
+		<item>Bulbasaur</item>
+		<item>Charmander</item>
+		<item>Squirtle</item>
+		<item>Pikachu</item>
+		<item>Eevee</item>
+	</string-array>
+	<string-array name="dota2_teams">
+		<item>Natus Vincere</item>
+		<item>Evil Geniuses</item>
+		<item>Invictus Gaming</item>
+		<item>Alliance</item>
+		<item>Newbee</item>
+		<item>LGD Gaming</item>
+		<item>Mineski</item>
+		<item>Fnatic</item>
+		<item>Virtuos Pro</item>
+		<item>Team Secret</item>
+	</string-array>
+</resources>

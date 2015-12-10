@@ -1,0 +1,71 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/LinearLayout1"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+	<TableRow
+		android:id="@+id/buttonRow"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="5dp" >
+		<Button
+			android:id="@+id/showSpinnerButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Show Spinner" />
+		<Button
+			android:id="@+id/showDatePickerButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Show Date Picker" />
+		<Button
+			android:id="@+id/showTimePickerButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Show Time Picker" />
+	</TableRow>
+	<EditText
+		android:id="@+id/username"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:inputType="text" >
+	</EditText>
+	<EditText
+		android:id="@+id/password"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:inputType="textPassword" />
+	<CheckBox
+		android:id="@+id/checkBox"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="CheckBox" />
+	<ToggleButton
+		android:id="@+id/toggleButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+	<RadioGroup
+		android:id="@+id/radioGroup"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:orientation="horizontal" >
+		<RadioButton
+			android:id="@+id/radioButton1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="RadioButton 1" />
+		<RadioButton
+			android:id="@+id/radioButton2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="RadioButton 2" />
+	</RadioGroup>
+</TableLayout>
